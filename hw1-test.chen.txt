@@ -1,0 +1,27 @@
+Testing Strategies:
+
+Test part 1 first and then test part 2.
+
+Test all the normal cases: 
+I will test whether each of the four conditions are being met individually. 
+1. "upper case and lower case"
+2. "one digit" case, 
+3. "at least one character is not letter or digit"
+4. "length is at least 6 characters"
+
+After testing with the output, I then test the "finish" case to see the program will end by typing the keyword "finish".
+
+Also, I checked whether the computer will continue to promot user for input before receiving keyword "finish"
+
+then I will test to see the number of conditions met and whether the report matches the standard.
+
+Part 2:
+
+test part 2 by entering non-common words and at least 10 common words in the text file to see if the program is able to report the correct number of searches as well as differentiating between common and uncommon words. 
+
+Since the only way user interacts with the program is by providing input. Then I will test some input edge cases:
+1. very long string
+2. empty string
+3. string with all special characters
+4. string that contains spaces in between
+5. test "finish1" to see if it shuts down the program
