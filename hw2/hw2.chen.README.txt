@@ -1,0 +1,32 @@
+(1)  For the file http://www.gutenberg.org/cache/epub/1342/pg1342.txt what is the depth of your tree?  What does that say about the number of operations to find a word?
+The depth is 28.  It says, given the assumption it’s a perfectly balanced tree,  you never have to search 29 times to find what you’re looking for. It also tells us about the number of nodes in the tree. There are a total of 2^(n)-1 nodes in the tree if every parent nodes have two child nodes. On average, it will take O(log n) to find the word and the worst case if O(n) which is basically a linked list.
+
+(2)  What would happen if the input to your program were sorted (as it was in HW 1)?
+It will create a degenerate binary tree (a linked list).
+
+(3)  What are applications for binary search tree?  In what ways are they superior to lists?  In what ways are they inferior to lists?
+Binary search tree is ideal for applications that data are constantly entering and leaving the system. Map is an application that is ideal for BST. Internet router is also another application that uses BST. It’s superior to list in terms of searching and deletion. Tree isn’t usually inferior to list. At worst it’s efficiency is as bad as an linked list. 
+ 
+Testing Strategies:
+
+My testing strategy is to test things as they are built. Since the assignment is based on the data structure. I have tested each function individually as I have built them. I have added the function add() first. Once it’s built, I have tried adding different orders of strings and integer to see if they are being correctly ordered by the program.(Please see the testing code in test.py) I also tested the size, and the height function everytime I made an adjustment to the structure of the tree. 
+
+A few cases I have tested:
+1. Adding numbers in random order.
+2. Adding a sorted list of number
+3. Adding both string and integers
+4. Adding a bunch of duplicates
+
+After ensuring the add works well then I go on and test the fund function. Some cases I have tested. 
+1. empty string
+2. search for something that doesn’t exist in the tree
+3. search for the root
+
+Now I know the tree is working. Then I dumped in the text to load the text. Then I run the program to get the stats and compare with other people’s stats. After comparing with 3+ people, then I know my stats seem to be correct. 
+
+At the end, I tested to see if a user is able to break the program by passing
+1. long string
+2. empty string
+3. special characters
+4. keyword ‘terminate’
+5. keyword ‘stats’
