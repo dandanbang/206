@@ -1,0 +1,58 @@
+What are the boundary cases? 
+
+The boundary cases include:
+1. large input file sizes that will crash the program. If we want to input this, we can throw exeptions that control the run time.
+2. User entering an extremely long string or file names, or special chatacters..etc. Our program will be able to handle such error
+3. urls contents are not correct. 
+4. server has no network connections or are sending HTTPErrors - ‘404’ (page not found), ‘403’ (request forbidden), and ‘401’ (authentication required)
+5. wrong file formats so the index go out of range
+6. wrong or empty file name or empty user input
+
+--------------------------------------
+
+What happens if catalog.txt comes in an unexpected format? 
+
+If the catalog.txt came in an unexpected format that my program is not design to run. I will throw an exception and print out a statement Unexpected error: Your file is probably formated wrong." 
+
+--------------------------------------
+
+What happens if a link is broken or the contents come in an unexpected format? etc.  
+
+I will throw three types of error to deal with broken links. We will throw URLError if there's no network connection, or the specified server does not exist. In this case, the exception raised will have a ‘reason’ attribute, which is a tuple containing an error code and a text error message. Or we will throw the HTTPError instance, which corresponds to the error sent by the server. Typical errors include ‘404’ (page not found), ‘403’ (request forbidden), and ‘401’ (authentication required). If the content is unexpected. We will just throw an exception and exit the program and inform the user the content/format is not acceptable.
+
+--------------------------------------
+
+Testing Strategies:
+
+My testing strategy is to test things as they are built. I have tested each function individually as I have built them. 
+
+The order I have tested the major functions are:
+1. createDict
+2. readBook
+3. wordCount
+4. search
+
+When I tested the functions. I usually pass in parameters that is of relative smaller sizes than the actual input (In this case, the actually text from the books or the number of titles) to see if my fucntion is working properly. Once I ensured that I was able to create a dictionary to store what I wanted..then I would move on to the next phase for the next requirement. Whenver there's a bug, I would insert print statement to see. After the program is built. I have tested a few things.
+
+for file input: 
+1. files that's don't exist
+2. wrong file type
+
+When I got to the user input part. 
+I have started to test..
+1. empty string
+2. search for something that doesn’t exist in any books
+3. long string
+4. special characters
+5. keyword ‘terminate’
+6. keyword 'titles'
+7. keyword 'catalog'
+7. upper cases combined with lower case
+
+I have also tested.
+
+1. different file format
+2. wrong url link
+
+Then I run the program to get the stats and compare with other people’s stats. After comparing with 3+ people, then I know my stats seem to be correct. 
+
